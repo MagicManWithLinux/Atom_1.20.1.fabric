@@ -1,7 +1,9 @@
 package com.lset.atom.common.command;
 
+import com.lset.atom.ui.ExampleScreen;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
@@ -13,6 +15,10 @@ public class ModCommands {
             .executes(Context ->{
             // Получаем игрока
             ServerPlayerEntity player = Context.getSource().getPlayerOrThrow();
+
+            MinecraftClient.getInstance().execute(() ->{
+                MinecraftClient.getInstance().setScreen(new ExampleScreen());
+            });
 
             // Отправка сообщения игроку
             player.sendMessage(Text.literal("открытие GUI..."),false);

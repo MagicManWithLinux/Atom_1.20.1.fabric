@@ -3,19 +3,25 @@ package com.lset.atom.ui;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 public class ExampleScreen extends Screen {
-
+    private static final Identifier KACHALKA = Identifier.of("atom","textures/gui/mine_menu.png");
     // Конструктор экрана с заголовком
     public ExampleScreen(){
-        super(Text.literal("Example GUI"));
-
+        super(Text.literal("")); //Добавление текста
     }
 
     //Метод для отрисовки экрана
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         this.renderBackground(context); //отрисовка фона
+        //Открисовка изображения на экране (x,y - координаты)
+        int x = (this.width - 256)/2; //Центрирование картинки по горизонтали
+        int y = (this.height - 200)/2; //Центрирование картинки по вертикали
+        context.drawTexture(KACHALKA,x,y,0,0,256,256);
+
+        //Отрисовка заголовка
         context.drawCenteredTextWithShadow(this.textRenderer,
                 this.title,this.width/2,20,0xFFFFFF);//отрисовка заголовка
         super.render(context, mouseX, mouseY, delta);
