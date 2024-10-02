@@ -3,6 +3,6 @@
   "textures": {
     "all": "minecraft:block/stone",
     "particle": "minecraft:block/stone",
-    "overlay": "atom:block/ore/beryl"
+    "overlay": "atom:block/ore/coal"
   }
 }
