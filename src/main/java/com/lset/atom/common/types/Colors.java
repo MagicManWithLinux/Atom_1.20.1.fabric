@@ -6,16 +6,8 @@ public enum Colors
     steel,
     lead,
     aluminum,
+
     silver,
-    yellow,
     orange,
-    red,
-    purple,
-    green,
-    lime,
-    cyan,
-    light_blue,
-    blue,
-    light_gray,
-    gray;
+
 }

@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.LadderBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -40,8 +41,8 @@ public class ModBlocks {
             Helpers.mapOfKeys(Colors.class, col ->
                     Helpers.mapOfKeys(MetallFrame.class, type ->
                             registerBlock(("metal/" + type.name() + "/" + col.name()),
-                                    new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
-                                            .noCollision()))));
+                                    new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                                            .nonOpaque()))));
 
 
     //Helpers
