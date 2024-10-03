@@ -41,7 +41,7 @@ public class ModBlocks {
             Helpers.mapOfKeys(Colors.class, col ->
                     Helpers.mapOfKeys(MetallFrame.class, type ->
                             registerBlock(("metal/" + type.name() + "/" + col.name()),
-                                    new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                                    new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                                             .nonOpaque()))));
 
 
