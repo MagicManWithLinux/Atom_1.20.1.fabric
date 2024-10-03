@@ -5,10 +5,10 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ExampleScreen extends Screen {
+public class LVL_Interface extends Screen {
     private static final Identifier KACHALKA = Identifier.of("atom","textures/gui/mine_menu.png");
     // Конструктор экрана с заголовком
-    public ExampleScreen(){
+    public LVL_Interface(){
         super(Text.literal("")); //Добавление текста
     }
 

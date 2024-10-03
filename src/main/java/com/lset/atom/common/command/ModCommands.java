@@ -1,6 +1,6 @@
 package com.lset.atom.common.command;
 
-import com.lset.atom.ui.ExampleScreen;
+import com.lset.atom.ui.LVL_Interface;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.client.MinecraftClient;
@@ -17,7 +17,7 @@ public class ModCommands {
             ServerPlayerEntity player = Context.getSource().getPlayerOrThrow();
 
             MinecraftClient.getInstance().execute(() ->{
-                MinecraftClient.getInstance().setScreen(new ExampleScreen());
+                MinecraftClient.getInstance().setScreen(new LVL_Interface());
             });
 
             // Отправка сообщения игроку
