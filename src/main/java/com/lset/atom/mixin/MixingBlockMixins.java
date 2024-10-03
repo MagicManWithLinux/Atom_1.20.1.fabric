@@ -1,6 +1,6 @@
 package com.lset.atom.mixin;
 
-import com.lset.atom.common.blocks.BlockMixing;
+//import com.lset.atom.common.blocks.BlockMixing;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -16,7 +16,7 @@ public class MixingBlockMixins {
     @Inject(method = "setBlockState",at = @At("RETURN"))
     private void onBlockSet(BlockPos pos, BlockState state, int flags, CallbackInfoReturnable<Boolean>cir){
         // Вызов вашего метода для проверки соседних блоков и смешивания
-        BlockMixing.tryMixBlocks((World) (Object)this,pos);
+//        BlockMixing.tryMixBlocks((World) (Object)this,pos);
     }
 
 }
