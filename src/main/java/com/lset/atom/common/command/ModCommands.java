@@ -11,6 +11,7 @@ import net.minecraft.text.Text;
 public class ModCommands {
     public static void register(CommandDispatcher<ServerCommandSource>dispatcher){
         dispatcher.register(
+        //Регестрация открытие GUI
         LiteralArgumentBuilder.<ServerCommandSource>literal("open-example")
             .executes(Context ->{
             // Получаем игрока

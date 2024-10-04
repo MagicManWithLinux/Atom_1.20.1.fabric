@@ -5,9 +5,6 @@ public enum Colors
     iron,
     steel,
     lead,
-    aluminum,
-
-    silver,
-    orange,
+    aluminum;
 
 }
