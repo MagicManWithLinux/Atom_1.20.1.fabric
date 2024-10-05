@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.GlassBlock;
 import net.minecraft.block.LadderBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -22,25 +21,25 @@ public class ModBlocks {
     public static final Block BLOCK_STALIN = registerBlock("block_stalin",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
-    //Массовая регистрация Постеров 1 регистор//
-    public static final Map<Posters, Block> POSTERS =
-            Helpers.mapOfKeys(Posters.class, type ->
+    //Массовая регистрация Постеров 1 регистор
+    public static final Map<BILDPosters, Block> POSTERS =
+            Helpers.mapOfKeys(BILDPosters.class, type ->
                     registerBlock(("decorations/posters/" + type.name()),
                             new LadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER)
                                     .noCollision())));
 
-    //Массовая регистрация Руды 2 регистра//
-    public static final Map<Rock, Map<Ore, Block>> ORES =
-            Helpers.mapOfKeys(Rock.class, rock ->
+    //Массовая регистрация Минералов и их базы 2 регистра
+    public static final Map<OreBaze, Map<Ore, Block>> ORES =
+            Helpers.mapOfKeys(OreBaze.class, oreBaze ->
                     Helpers.mapOfKeys(Ore.class, ore ->
-                            registerBlock(("ore/" + ore.name() + "/" + rock.name()),
+                            registerBlock(("ore/" + ore.name() + "/" + oreBaze.name()),
                                     new Block(FabricBlockSettings.copyOf(Blocks.STONE)))));
 
-    //Регестрация Металлических блоков и их вариаций, Спиздил с TFC Очень круто
-    public static final Map<Colors, Map<MetallFrame, Block>> CONSTRUCTIONE =
-            Helpers.mapOfKeys(Colors.class, col ->
-                    Helpers.mapOfKeys(MetallFrame.class, type ->
-                            registerBlock(("metal/" + type.name() + "/" + col.name()),
+    //Регестрация Металлических блоков и их вариаций 2 регистра
+    public static final Map<BILDMetallMaterial, Map<BILDMetallType, Block>> CONSTRUCTIONE =
+            Helpers.mapOfKeys(BILDMetallMaterial.class, material ->
+                    Helpers.mapOfKeys(BILDMetallType.class, type ->
+                            registerBlock(("metal/" + type.name() + "/" + material.name()),
                                     new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                                             .nonOpaque()))));
 

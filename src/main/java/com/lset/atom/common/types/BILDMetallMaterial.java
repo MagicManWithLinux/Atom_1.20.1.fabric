@@ -1,6 +1,6 @@
 package com.lset.atom.common.types;
 //Спиздил с TFC Я Гений
-public enum Colors
+public enum BILDMetallMaterial
 {
     iron,
     steel,
