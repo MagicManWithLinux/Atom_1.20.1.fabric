@@ -10,6 +10,7 @@ public class AtomClient implements ClientModInitializer {
     public void onInitializeClient() {
         // Инициализация рендеров при старте клиента
         clientSetup();
+        playerModelInitialize();
     }
 
     public static void clientSetup() {
@@ -27,4 +28,5 @@ public class AtomClient implements ClientModInitializer {
                 BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout())
         );
     }
+    public static void playerModelInitialize() {};
 }
