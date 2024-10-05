@@ -1,10 +1,8 @@
 {
-  "parent": "atom:block/main/oreup",
+  "parent": "atom:block/main/ore",
   "textures": {
     "all": "minecraft:block/stone",
     "particle": "minecraft:block/stone",
-    "overlay": "atom:block/ore/autunite",
-    "overlayup": "atom:block/ore/autuniteup",
-    "overlaydown": "atom:block/ore/autuniteup"
+    "overlay": "atom:block/ore/autunite"
   }
 }
