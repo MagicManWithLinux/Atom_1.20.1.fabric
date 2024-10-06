@@ -20,8 +20,11 @@ public class ModItemGroups {
                     .displayName(Text.translatable("atom_itemsgroup"))
                     .icon(() -> new ItemStack(ModBlocks.BLOCK_STALIN))
                     .entries((displayContext, entries) ->
-                            //Одиночное добавление предметов
-                            entries.add(ModItems.TEST)
+                    {
+                        //Одиночное добавление предметов
+                        entries.add(ModItems.TEST);
+                        ModItems.ITEMSZERO.forEach((key, zero) -> entries.add(zero));
+                    }
                     ).build());
 
     public static final ItemGroup ATOM_BLOCKS_TAB = Registry.register(Registries.ITEM_GROUP,
@@ -46,6 +49,16 @@ public class ModItemGroups {
                         //Массовое добавление предметов с 1 регистром
                         ModBlocks.POSTERS.forEach((key, posters) -> entries.add(posters));
                         ModBlocks.CONSTRUCTIONE.forEach((key, map) -> map.forEach((subkey, ores) -> entries.add(ores)));
+                    }
+                    ).build());
+    public static final ItemGroup ATOM_MAGIC_TAB = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Atom.MOD_ID, "atom_magic_tab"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("atom_decogroup"))
+                    .icon(() -> new ItemStack(ModBlocks.BLOCK_STALIN))
+                    .entries((displayContext, entries) ->
+                    {
+
                     }
                     ).build());
 
