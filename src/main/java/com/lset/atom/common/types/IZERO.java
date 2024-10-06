@@ -1,6 +1,7 @@
 package com.lset.atom.common.types;
 
-public enum OreBaze
+public enum IZERO
 {
-    stone;
+    dedf,
+    dedr
 }
