@@ -9,11 +9,11 @@ public class AtomClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         // Инициализация рендеров при старте клиента
-        clientSetup();
+        clientRenderBlock();
         playerModelInitialize();
     }
 
-    public static void clientSetup() {
+    public static void clientRenderBlock() {
 
         // Прозрачность руд
         ModBlocks.ORES.values().forEach(map -> map.values().forEach(block ->
