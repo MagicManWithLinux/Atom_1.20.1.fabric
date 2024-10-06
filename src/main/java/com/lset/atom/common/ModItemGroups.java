@@ -23,6 +23,7 @@ public class ModItemGroups {
                     {
                         //Одиночное добавление предметов
                         entries.add(ModItems.TEST);
+                        //Массовое добавление предметов с 1 регистром
                         ModItems.ITEMSZERO.forEach((key, zero) -> entries.add(zero));
                     }
                     ).build());

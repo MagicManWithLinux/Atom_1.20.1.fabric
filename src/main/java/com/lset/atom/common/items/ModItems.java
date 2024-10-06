@@ -15,8 +15,7 @@ public class ModItems {
 
     //Регестрация добавленных предметов
     public static final Item TEST = registerItem("test", new Item(new FabricItemSettings()));
-    public static final Map<IZERO, Item> ITEMSZERO =
-            Helpers.mapOfKeys(IZERO.class, type ->
+    public static final Map<IZERO, Item> ITEMSZERO = Helpers.mapOfKeys(IZERO.class, type ->
                     registerItem(("izero/" + type.name()),
                             new Item(new FabricItemSettings())));
 
