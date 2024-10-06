@@ -29,16 +29,16 @@ public class ModBlocks {
                                     .noCollision())));
 
     //Массовая регистрация Минералов и их базы 2 регистра
-    public static final Map<OreBaze, Map<Ore, Block>> ORES =
-            Helpers.mapOfKeys(OreBaze.class, oreBaze ->
-                    Helpers.mapOfKeys(Ore.class, ore ->
-                            registerBlock(("ore/" + ore.name() + "/" + oreBaze.name()),
+    public static final Map<Ore, Map<OreBaze, Block>> ORES =
+            Helpers.mapOfKeys(Ore.class, type ->
+                    Helpers.mapOfKeys(OreBaze.class, oreBaze ->
+                            registerBlock(("ore/" + type.name() + "/" + oreBaze.name()),
                                     new Block(FabricBlockSettings.copyOf(Blocks.STONE)))));
 
     //Регестрация Металлических блоков и их вариаций 2 регистра
-    public static final Map<BILDMetallMaterial, Map<BILDMetallType, Block>> CONSTRUCTIONE =
-            Helpers.mapOfKeys(BILDMetallMaterial.class, material ->
-                    Helpers.mapOfKeys(BILDMetallType.class, type ->
+    public static final Map<BILDMetallType, Map<BILDMetallMaterial, Block>> CONSTRUCTIONE =
+            Helpers.mapOfKeys(BILDMetallType.class, type ->
+                    Helpers.mapOfKeys(BILDMetallMaterial.class, material ->
                             registerBlock(("metal/" + type.name() + "/" + material.name()),
                                     new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                                             .nonOpaque()))));
